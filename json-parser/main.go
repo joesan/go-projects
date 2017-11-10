@@ -54,5 +54,5 @@ func main() {
 	// Decode the file into the Bakery type
 	var bakery Bakery
 	err = json.NewDecoder(file).Decode(&bakery)
-	fmt.Printf("%v", bakery)
+	fmt.Printf("%+v\n", bakery)
 }
