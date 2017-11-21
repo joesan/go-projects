@@ -10,7 +10,7 @@ import(
 var wg sync.WaitGroup
 
 func init() {
-    runtim.GOMAXPROCS(runtime.NumCPU())
+    runtime.GOMAXPROCS(runtime.NumCPU())
 }
 
 func main() {
