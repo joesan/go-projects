@@ -21,14 +21,19 @@ func main() {
 }
 
 func foo() {
+
+    defer wg.done()
+
     for i = 0; i < 100; i++ {
         fmt.Println("Foo = ", i)
         time.Sleep(time.Duration(4 * time.Millisecond))
     }
-    wg.done()
 }
 
 func bar() {
+
+    defer wg.done()
+
     for i = 0; i < 100; i++ {
         fmt.Println("Boo = ", i)
         time.Sleep(time.Duration(20 * time.Millisecond))
